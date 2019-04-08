@@ -19,4 +19,10 @@ app.get("/artists", (req, res) => {
   res.send(artists);
 });
 
+app.get("/artists/:id", (req, res) => {
+  // console.log(req.params);
+  const artist = artists.find(artist => artist.id === Number(req.params.id));
+  res.send(artist);
+});
+
 
