@@ -41,3 +41,11 @@ app.put("/artists/:id",(req, res) => {
   res.sendStatus(200);
 });
 
+app.delete("/artists/:id",(req, res) => {
+  artists = artists.filter(artist => artist.id !== Number(req.params.id));
+  res.sendStatus(200);
+});
+
+app.listen(3012, () => {
+  console.log("API app started");
+});
