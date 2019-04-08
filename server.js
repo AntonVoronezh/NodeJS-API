@@ -35,3 +35,9 @@ app.post("/artists", (req, res) => {
   res.send(artist);
 });
 
+app.put("/artists/:id",(req, res) => {
+  const artist = artists.find(artist => artist.id === Number(req.params.id));
+  artist.name = req.body.name;
+  res.sendStatus(200);
+});
+
