@@ -1,8 +1,11 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-const artists = [
+let artists = [
   { id: 1, name: "Metallica" },
   { id: 2, name: "Iron Maiden" },
   { id: 3, name: "Deep Purple" }
@@ -16,12 +19,4 @@ app.get("/artists", (req, res) => {
   res.send(artists);
 });
 
-app.get("/artists/:id", (req, res) => {
-  // console.log(req.params);
-  const artist = artists.find(artist => artist.id === Number(req.params.id));
-  res.send(artist);
-});
 
-app.listen(3012, () => {
-  console.log("API app started");
-});
