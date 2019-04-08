@@ -25,4 +25,13 @@ app.get("/artists/:id", (req, res) => {
   res.send(artist);
 });
 
+app.post("/artists", (req, res) => {
+  const artist = {
+    id: Date.now(),
+    name: req.body.name
+  };
+  artists.push(artist);
+  // console.log(req.body);
+  res.send(artist);
+});
 
