@@ -1,0 +1,22 @@
+{
+  "name": "nodejs-api",
+  "version": "1.0.0",
+  "description": "API on node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntonVoronezh/NodeJS-API.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntonVoronezh/NodeJS-API/issues"
+  },
+  "homepage": "https://github.com/AntonVoronezh/NodeJS-API#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
